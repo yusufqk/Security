@@ -55,7 +55,7 @@ class BotNet(object):
     def alive_hosts(self):
         
         for bot,output in execute(self.run_cmd,"uptime",hosts=self.hosts).iteritems():
-            if output == "Something went wrong":
+            if output == "[!] Something went wrong.":
                 print bot + " is dead"
             else:
                 print bot + " is alive"
