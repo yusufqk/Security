@@ -5,6 +5,7 @@ from Crypto.Cipher import AES
 from passlib.hash import pbkdf2_sha256
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
+import bcrypt
 import getpass
 import sys
 import struct
@@ -18,11 +19,10 @@ import os
 def decrypt_key(edit,view):
    
     passwd = getpass.getpass("Enter Password: ")
-    hash = "$pbkdf2-sha256$200000$eU.JMSZkzPl/b61VKmVMSQ$RZ2S8zCgiCZuKeV5qR59k5ZLHqI4bImzhDad/blddrg"
+    
+    hash1 = "$2b$12$GOI.Bn1BVCRB/H8Owiqacu79wugPW8x9O49YVghdKglT9LaCtWsMe"
   
-    verify = pbkdf2_sha256.verify(str(passwd),hash) #must put str() to make it work
-
-    if not verify:
+    if (hash1 == bcrypt.hashpw(str(passwd),hash1)) == False:
         print "[!] Incorrect password. Goodbye."
         sys.exit()
 
