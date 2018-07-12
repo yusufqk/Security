@@ -5,6 +5,9 @@ Author: Yusuf Kassim
 
 This script is a tcp proxy that will be used to pivot on a network
 Initially made to relay between devices communiacting via netcat
+*Taken from BlackHat, but modified to my liking. This proxy cannot 
+handle more than one request at a time. I must look into asynchronous
+sockets. 
 """
 
 import sys

@@ -3,7 +3,9 @@
 """
 Author: Yusuf Kassim
 
-This script will attempt to break into a device that is running a FTP service. First an anonymous login will be attempted. Then the ftp credentials will be brute forced using a credentials list (the same list used by the mirai botnet). If access is gained then a malicious javascript injection will be placed within any default web page hosted by the ftp service. 
+This script will attempt to break into a device that is running a FTP service. First an anonymous login will be attempted. 
+Then the ftp credentials will be brute forced using a credentials list (the same list used by the mirai botnet). 
+If access is gained then a malicious javascript injection will be placed within any default web page hosted by the ftp service. 
 
 I will try to explore various inject scripts in order to learn different exploit methods.
 """

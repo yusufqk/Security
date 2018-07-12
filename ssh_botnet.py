@@ -4,7 +4,9 @@
 
 Author: Yusuf Kassim
 
-This script uses the fabric library to construct a botnet by utilizing SSH connections with each bot. The hostname and credentials for each machine will be read from a file, fed to the fabric framework, and a while loop usedto execute commands to all bots. 
+This script uses the fabric library to construct a botnet by utilizing SSH connections with each bot. 
+The hostname and credentials for each machine will be read from a file, fed to the fabric framework, 
+and a while loop usedto execute commands to all bots. 
 
 The botnet will be used to automate downloads, uploads, and execute commands for attacking purposes.
 
