@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from key_gen import Generator
+#from key_gen import Generator
 from Crypto.Cipher import AES
 from passlib.hash import pbkdf2_sha256
 from Crypto.PublicKey import RSA
@@ -21,8 +21,9 @@ def decrypt_key(edit,view):
     passwd = getpass.getpass("Enter Password: ")
     
     hash1 = "$2b$12$GOI.Bn1BVCRB/H8Owiqacu79wugPW8x9O49YVghdKglT9LaCtWsMe"
+    hash2 = "$2a$12$hLiCfiMkJQcIt.h9zw4pXOCiWQXw4.Nv4m1alSKrhuaUVZ08AcVGS"
   
-    if (hash1 == bcrypt.hashpw(str(passwd),hash1)) == False:
+    if (hash2 == bcrypt.hashpw(str(passwd),hash2)) == False:
         print "[!] Incorrect password. Goodbye."
         sys.exit()
 
