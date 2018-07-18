@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#from key_gen import Generator
+from key_gen import Generator
 from Crypto.Cipher import AES
 from passlib.hash import pbkdf2_sha256
 from Crypto.PublicKey import RSA
