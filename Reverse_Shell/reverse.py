@@ -36,7 +36,7 @@ def Montezuma(client):
 while True:
 
     client,addr = server.accept()
-    print "[*] Incmoing connection from %s:%d" % (addr[0],addr[1])
+    print "[*] Incoming connection from %s:%d" % (addr[0],addr[1])
     
 
     Hernan_Cortes = threading.Thread(target=Montezuma(client))

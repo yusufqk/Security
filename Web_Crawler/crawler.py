@@ -12,8 +12,8 @@ import urllib
 import base64
 from colorama import Fore
 
-workers = 20
-target = "http://192.168.56.101"
+workers = 50
+target = "http://192.168.1.130"
 wordlist_file = "all.txt"
 resume = None
 user_agent = "Googlebot"
@@ -66,8 +66,8 @@ def dir_bruter(word_queue):
             try:
                 headers = {}
                 headers["User-Agent"] = user_agent
-                headers["Connection"] = "keep-alive"
-                headers["Upgrade-Insecure-Requests"] = 1
+                #headers["Connection"] = "keep-alive"
+                #headers["Upgrade-Insecure-Requests"] = 1
                 request = urllib2.Request(url,headers=headers)
                 response = urllib2.urlopen(request)
                 
