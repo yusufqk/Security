@@ -20,7 +20,7 @@ def decrypt_key(edit,view):
    
     passwd = getpass.getpass("Enter Password: ")
     
-    hash1 = "$2b$12$GOI.Bn1BVCRB/H8Owiqacu79wugPW8x9O49YVghdKglT9LaCtWsMe"
+    #hash1 = "$2b$12$GOI.Bn1BVCRB/H8Owiqacu79wugPW8x9O49YVghdKglT9LaCtWsMe"
     hash2 = "$2a$12$hLiCfiMkJQcIt.h9zw4pXOCiWQXw4.Nv4m1alSKrhuaUVZ08AcVGS"
   
     if (hash2 == bcrypt.hashpw(str(passwd),hash2)) == False:
@@ -72,6 +72,8 @@ def decrypt_key(edit,view):
     if view:
         print 
         print passwords
+        time.sleep(10)
+        os.system("clear")
 
     if edit:
         with open("passwords","wb") as fobj:
