@@ -13,7 +13,7 @@ import base64
 from colorama import Fore
 
 workers = 50
-target = "http://192.168.1.130"
+target = "http://192.168.1.110"
 wordlist_file = "all.txt"
 resume = None
 user_agent = "Googlebot"

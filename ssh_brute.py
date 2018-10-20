@@ -93,7 +93,7 @@ class SSH_Brute(object):
        
         if keys == False:
             
-            with open('10k-most-common.txt','rb') as fobj:
+            with open('usernames.txt','rb') as fobj:
                 words = fobj.read().splitlines()
         
             for passwd in words:

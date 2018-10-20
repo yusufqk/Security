@@ -72,8 +72,8 @@ def decrypt_key(edit,view):
     if view:
         print 
         print passwords
-        time.sleep(10)
-        os.system("clear")
+        time.sleep(20)
+        os.system("reset")
 
     if edit:
         with open("passwords","wb") as fobj:

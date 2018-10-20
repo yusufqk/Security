@@ -19,6 +19,16 @@ from hexdump import hexdump
 import optparse
 import socket
 
+
+twister ="""
+     |__   __|     (_)   | |
+        | |_      ___ ___| |_ ___ _ __ 
+        | \ \ /\ / / / __| __/ _ \ '__|
+        |    |\ V  V /| \__ \ ||  __/   
+        |_| \_/\_/ |_|___/\__\___|_| 
+"""
+print twister
+
 class Proxy(Protocol):
 
     def __init__(self,remote_host,remote_port):
