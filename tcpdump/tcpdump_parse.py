@@ -12,7 +12,7 @@ class MrMeeSeeks(object):
 
             numbers.append(str(i))
 
-        self.address = raw_input("Whats your ip address: ")
+        self.address = raw_input("Whats the source ip address: ")
 
         breakdown = self.address.split(".")
 
@@ -88,10 +88,11 @@ class MrMeeSeeks(object):
 
     def parse_dump(self):
 
-        with open('/home/binyamin/tcpdump_file.txt', 'rb') as fobj:
+        with open('tcpdump_file.txt', 'rb') as fobj:
             lines = fobj.read().splitlines()
         
         final = []
+        count = 0
 
         for i in range(len(lines)):
             
@@ -107,27 +108,72 @@ class MrMeeSeeks(object):
             
             first_ip,second_ip = self.auxillary(ip_ports)
             
-            output = [[],[],0]
+            output = [[],[],0,""]
 
             output[0].append(first_ip)
             output[1].append(second_ip)
             output[2] += int(size)
+            output[3] = output[0][0].strip() + "-" + output[1][0].strip()
 
-            try:
-                repeater = final.index(output)            
-            except:
-                final.append(output)
-            else:
-                output[2] += final[repeater][2]
-                final.append(output)
-                
+                    
+            final.append(output)
+        
         result = self.filter(final,self.address)
 
         real_list = self.sort_list(result)
 
+
+        mr_robot = {}
+            
         for i in range(len(real_list)):
 
-            print real_list[i][0][0] + "   " + real_list[i][1][0] + "   " + str(real_list[i][2])
+            dst = real_list[i][1][0]
+            size = real_list[i][2]
+            
+            if dst in mr_robot:
+                mr_robot[dst] += size
+            else:
+                mr_robot[dst] = size
+
+        
+        sort_num = []
+
+        for k,v in mr_robot.items():
+
+            sort_num.append(v)
+
+        sort_num = sorted(sort_num, reverse=True)
+
+        ordered = []
+
+        for i in range(len(sort_num)):
+            for k,v in mr_robot.items():
+
+                if sort_num[i] == mr_robot[k]:
+
+                    ordered.append(k)
+                    break
+        
+        print "Source IP"+"\t" + "Destination IP"+"\t" + "Packet Size"
+        print
+
+        for i in range(len(sort_num)):
+
+            print self.address+"\t" + ordered[i]+"\t" + str(sort_num[i])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

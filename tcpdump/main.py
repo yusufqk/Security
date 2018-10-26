@@ -7,7 +7,7 @@ test = MrMeeSeeks()
 check = test.check_ip()
 
 if check:
-    print "valid ip address"
+    #print "valid ip address"
     print
     test.parse_dump()
 
