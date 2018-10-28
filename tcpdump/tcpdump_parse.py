@@ -180,7 +180,6 @@ class MrMeeSeeks(object):
             
             if match is not None:
 
-                string = str(match.subdivisions)[12:14]
                 x,y = str(match.location[0]), str(match.location[1])
 
                 print ordered[i]+"\t" + " --->"+"\t" + match.country+"\t" + x+","+y
