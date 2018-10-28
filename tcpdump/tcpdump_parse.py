@@ -1,6 +1,8 @@
 #!/usr/bin/python
 
 import sys
+import time
+from geoip import open_database
 
 class MrMeeSeeks(object):
         
@@ -92,7 +94,6 @@ class MrMeeSeeks(object):
             lines = fobj.read().splitlines()
         
         final = []
-        count = 0
 
         for i in range(len(lines)):
             
@@ -162,7 +163,31 @@ class MrMeeSeeks(object):
             print self.address+"\t" + ordered[i]+"\t" + str(sort_num[i])
 
 
+        db = open_database('/home/binyamin/Downloads/GeoLite2-City_20181023/GeoLite2-City.mmdb')
 
+        print
+        
+
+        print "[*] Calculating locations for top 5 IP addresses..."
+        print
+        time.sleep(2)
+        print "IP address"+"\t" + "    "+"\t" + "Country"+"\t" + "Coordinates"
+        print
+
+        for i in range(5):
+
+            match = db.lookup(ordered[i])
+            
+            if match is not None:
+
+                string = str(match.subdivisions)[12:14]
+                x,y = str(match.location[0]), str(match.location[1])
+
+                print ordered[i]+"\t" + " --->"+"\t" + match.country+"\t" + x+","+y
+
+            else:
+
+                continue
 
 
 
