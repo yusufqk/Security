@@ -3,6 +3,7 @@
 import sys
 import time
 from geoip import open_database
+from colorama import Fore
 
 class MrMeeSeeks(object):
         
@@ -168,7 +169,7 @@ class MrMeeSeeks(object):
         print
         
 
-        print "[*] Calculating locations for top 5 IP addresses..."
+        print Fore.GREEN + "[*] Calculating locations for top 5 IP addresses..." + Fore.RESET
         print
         time.sleep(2)
         print "IP address"+"\t" + "    "+"\t" + "Country"+"\t" + "Coordinates"
