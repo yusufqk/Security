@@ -25,7 +25,7 @@ class DarkArmy(object):
 
         self.wordlist = sys.argv[1]
         self.target = "http://"+sys.argv[2]
-        self.workers = 45
+        self.workers = 75
         self.user_agent = "Googlebot"
         self.progress = list("[--------------------]")
 
@@ -88,8 +88,7 @@ class DarkArmy(object):
                 time.sleep(1)
                 sys.exit()
             
-
-
+            
             attack = mr_robot.get()
 
             url_path = "%s%s" % (self.target,urllib.quote(attack))            
@@ -99,14 +98,14 @@ class DarkArmy(object):
                 headers = {}
                 headers["User-Agent"] = self.user_agent
                 request = urllib2.Request(url_path,headers=headers)
-                response = urllib2.urlopen(request)
+                response = urllib2.urlopen(request,timeout=2)
 
-            except urllib2.URLError,e:
-
-                if e.code == 404:
-                    continue
-                else:
+            except Exception as e:
+                if hasattr(e,"code") and e.code == 403:
                     print "[!] [%d] ==> %s+\n" % (e.code,url_path)
+                    #pass
+                else:
+                    continue
 
             else:
                         

