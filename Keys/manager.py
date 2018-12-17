@@ -16,6 +16,8 @@ import optparse
 import time
 import os
 import pyperclip
+import pygame
+import random
 
 def decrypt_key(edit,view,account):
    
@@ -95,7 +97,22 @@ def decrypt_key(edit,view,account):
         pyperclip.copy(account_info[2])
         account_passwd = pyperclip.paste()
         
-        time.sleep(10)
+        audio_seeks = {
+                1:"Hi_I'm_mr_meeseeks_look_at_me.wav",
+                2:"Oooo_yeah__caaan_doo!.wav",
+                3:"stickler.mp3",
+                4:"woo_vu_luvub_dub_dub.wav",
+                5:"yessir.mp3"
+                }
+
+        audio_num = random.randint(1,5)
+
+        pygame.init()
+
+        pygame.mixer.music.load(audio_seeks[audio_num])
+        pygame.mixer.music.play()
+
+        time.sleep(30)
         pyperclip.copy("WUBBA LUBBA DUB DUBS!!!")
         clear_passwd = pyperclip.paste()
         os.system("shred temporary")
