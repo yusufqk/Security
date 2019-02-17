@@ -8,6 +8,8 @@ Then the ftp credentials will be brute forced using a credentials list (the same
 If access is gained then a malicious javascript injection will be placed within any default web page hosted by the ftp service. 
 
 I will try to explore various inject scripts in order to learn different exploit methods.
+
+reference: Violent Python (the code model was taken from this book)
 """
 
 

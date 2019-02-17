@@ -1,5 +1,8 @@
 #!/usr/bin/python
 
+#This application AES encrypts the private key and using the password from input decrypts the private key
+#which then decrypts the password file.
+
 from key_gen import Generator
 from Crypto.Cipher import AES
 from passlib.hash import pbkdf2_sha256

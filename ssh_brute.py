@@ -8,6 +8,9 @@ Important lesson: the else block in a try-except-else segment is only executed i
 In order to execute the code in the else block even if an exception is rasied, I must use try-except-finally 
 
 I am undecided as to extend this to more than one target. 
+
+reference: Violent Python (The code framework was taken from this book)
+
 """
 
 
