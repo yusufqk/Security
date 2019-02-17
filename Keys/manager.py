@@ -98,11 +98,11 @@ def decrypt_key(edit,view,account):
         account_passwd = pyperclip.paste()
         
         audio_seeks = {
-                1:"Hi_I'm_mr_meeseeks_look_at_me.wav",
-                2:"Oooo_yeah__caaan_doo!.wav",
-                3:"stickler.mp3",
-                4:"woo_vu_luvub_dub_dub.wav",
-                5:"yessir.mp3"
+                1:"./Audio/Hi_I'm_mr_meeseeks_look_at_me.wav",
+                2:"./Audio/Oooo_yeah__caaan_doo!.wav",
+                3:"./Audio/stickler.mp3",
+                4:"./Audio/woo_vu_luvub_dub_dub.wav",
+                5:"./Audio/yessir.mp3"
                 }
 
         audio_num = random.randint(1,5)
