@@ -3,6 +3,10 @@
 """
 This Class generates a random password and RSA keys when needed. It also encrypts and ecrypts
 data using PKA
+
+Reference: https://medium.com/@ismailakkila/black-hat-python-encrypt-and
+-decrypt-with-rsa-cryptography-bd6df84d65bc
+
 """
 
 from Crypto.PublicKey import RSA
