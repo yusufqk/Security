@@ -4,8 +4,8 @@
 
 Author: Yusuf Kassim
 
-This script will brute force known drectories on atarget website to find web content. The wordlist and target ip 
-will be given as command-line arguments
+This script will brute force known directories on a target website to find web content. 
+The wordlist and target ip will be given as command-line arguments
 
 This is my own version of DirBuster from Kali. 
 
