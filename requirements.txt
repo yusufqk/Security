@@ -86,7 +86,7 @@ python-evtx==0.6.1
 python-geoip==1.2
 python-geoip-geolite2==2015.303
 python-nmap==0.6.1
-PyYAML==3.11
+PyYAML==5.4
 rayon==1.4.3
 repoze.lru==0.6
 requests==2.9.1
