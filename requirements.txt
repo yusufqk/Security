@@ -64,7 +64,7 @@ Pillow==3.1.2
 pipreqs==0.4.9
 pluggy==0.7.1
 ptyprocess==0.5.2
-py==1.6.0
+py==1.10.0
 pyasn1==0.1.9
 pyasn1-modules==0.2.2
 pycountry==18.2.23
