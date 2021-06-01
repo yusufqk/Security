@@ -104,7 +104,7 @@ Twisted==18.4.0
 unity-lens-photos==1.0
 unix==1.0
 uritemplate==3.0.0
-urllib3==1.13.1
+urllib3==1.26.5
 uTidylib==0.2
 vboxapi==1.0
 WebOb==1.5.1
