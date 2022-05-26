@@ -100,7 +100,7 @@ shellescape==3.4.1
 SimpleWebSocketServer==0.1.0
 six==1.10.0
 texttable==0.8.1
-Twisted==18.4.0
+Twisted==22.4.0
 unity-lens-photos==1.0
 unix==1.0
 uritemplate==3.0.0
