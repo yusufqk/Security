@@ -34,7 +34,7 @@ functools32==3.2.3.post2
 future==0.17.1
 github3.py==1.1.0
 hexdump==3.3
-html5lib==0.999
+html5lib==0.99999999
 hyperlink==18.0.0
 idna==2.0
 incremental==17.5.0
